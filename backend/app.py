@@ -49,5 +49,9 @@ def chat():
     except Exception as e:
         return jsonify({"reply": f"Error: {str(e)}"}), 500
 
+print("USER INPUT:", user_input)
+print("API REPLY:", response.text)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
