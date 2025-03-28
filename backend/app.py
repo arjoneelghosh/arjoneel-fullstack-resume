@@ -9,7 +9,7 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)
 
-DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
 @app.route('/api/chat', methods=['POST'])
 def chat():
@@ -18,16 +18,17 @@ def chat():
 
     try:
         headers = {
-            "Authorization": f"Bearer {DEEPSEEK_API_KEY}",
+            "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+            "HTTP-Referer": "https://your-site.com",  # Optional for public OpenRouter listing
             "Content-Type": "application/json"
         }
 
         payload = {
-            "model": "deepseek-chat",
+            "model": "mistralai/mistral-7b-instruct",  # Free and fast
             "messages": [
                 {
                     "role": "system",
-                    "content": "You are Arjoneel Ghosh's AI representative. Help users understand his background, projects, and experience. You can respond in English, Hindi, and Bengali."
+                    "content": "You are Arjoneel Ghosh's AI representative. Help users understand his background, projects, and skills. You may reply in English, Hindi, or Bengali based on the input."
                 },
                 {
                     "role": "user",
@@ -37,7 +38,7 @@ def chat():
             "temperature": 0.7
         }
 
-        response = requests.post("https://api.deepseek.com/v1/chat/completions", headers=headers, json=payload)
+        response = requests.post("https://openrouter.ai/api/v1/chat/completions", headers=headers, json=payload)
         response.raise_for_status()
 
         reply = response.json()["choices"][0]["message"]["content"]
