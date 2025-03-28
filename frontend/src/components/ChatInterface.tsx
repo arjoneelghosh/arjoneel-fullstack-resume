@@ -35,8 +35,8 @@ export function ChatInterface({ isOpen, onClose }: ChatInterfaceProps) {
     setMessages((prev) => [...prev, newMessage]);
     setInputMessage('');
 
-    try {
-      const response = await fetch("https://arjoneel-chatbot-api.onrender.com/api/chat", {
+    try {  
+    const res = await fetch('https://arjoneel-fullstack-resume.onrender.com/api/chat', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: inputMessage }),
