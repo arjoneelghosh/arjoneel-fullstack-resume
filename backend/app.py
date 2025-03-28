@@ -29,12 +29,13 @@ def chat():
         }
 
         payload = {
-            "model": "openrouter/auto",  # You can use 'mistralai/mixtral' or other OpenRouter models
-            "messages": [
-                {"role": "system", "content": "You are Arjoneel Ghosh's AI representative. Help users understand his projects, resume, and career background. Answer in English, Hindi, or Bengali as needed."},
-                {"role": "user", "content": user_input}
-            ]
-        }
+    "model": "mistralai/mixtral-8x7b",
+    "messages": [
+        {"role": "system", "content": "You are Arjoneel Ghosh's AI representative. Help users understand his projects, resume, and career background. Answer in English, Hindi, or Bengali as needed."},
+        {"role": "user", "content": user_input}
+    ]
+}
+
 
         response = requests.post("https://openrouter.ai/api/v1/chat/completions", headers=headers, json=payload)
         response.raise_for_status()
