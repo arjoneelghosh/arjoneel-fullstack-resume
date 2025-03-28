@@ -7,26 +7,32 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)  # allow requests from Bolt frontend
+CORS(app)
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 @app.route('/api/chat', methods=['POST'])
 def chat():
-    data = request.get_json()
+    data = request.get_json() or {}
     user_input = data.get("message", "")
 
     try:
-        response = openai.ChatCompletion.create(
-            model="gpt-4-1106-preview",  # Use gpt-4-turbo
+        response = client.chat.completions.create(
+            model="gpt-4",
             messages=[
-                {"role": "system", "content": "You are Arjoneel Ghosh's AI representative. Help users understand his background, projects, and career. You can also reply in Hindi and Bengali if users message in those languages."},
-                {"role": "user", "content": user_input}
+                {
+                    "role": "system",
+                    "content": "You are Arjoneel Ghosh's AI representative. Help users understand his background, projects, and experience. You can respond in English, Hindi, and Bengali."
+                },
+                {
+                    "role": "user",
+                    "content": user_input
+                }
             ],
             temperature=0.7
         )
 
-        reply = response['choices'][0]['message']['content']
+        reply = response.choices[0].message.content
         return jsonify({"reply": reply})
 
     except Exception as e:
