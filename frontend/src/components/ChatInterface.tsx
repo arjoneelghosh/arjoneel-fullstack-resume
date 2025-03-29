@@ -17,7 +17,7 @@ export function ChatInterface({ isOpen, onClose }: ChatInterfaceProps) {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 'welcome',
-      text: "Hello! I'm Arjoneel Ghosh's AI assistant. Ask me about any of his projects or experience — I speak English, Hindi, and Bengali!",
+      text: "Hello! I'm Arjoneel Ghosh's AI assistant. Ask me about any of his projects o experience — I speak English, Hindi, and Bengali!",
       sender: 'bot',
     },
   ]);
