@@ -62,4 +62,50 @@
 
 ---
 
-## 🔹 UI Clones (Netflix, Spotify
+## 🔹 UI Clones (Netflix, Spotify, Resume Website)
+**Type**: Personal Projects  
+**Timeline**: Oct 2022 – Feb 2023  
+**Tech Stack**: HTML, CSS, JavaScript, Tailwind CSS, Node.js, React.js, PostgreSQL  
+**Skills**: UI Engineering, Theming, Authentication  
+**Outcome**: Produced responsive clones with modern UI/UX  
+**Description**: Built full-stack replicas of major web apps focusing on layout replication, smooth animations, and authentication flows.
+
+---
+
+## 🔹 American Sign Language Detection
+**Type**: Hackathon Project  
+**Timeline**: Jul 2023 – Nov 2023  
+**Tech Stack**: Python (OpenCV, CNN, Keras), Streamlit  
+**Skills**: Computer Vision, Gesture Recognition, Deep Learning  
+**Outcome**: Enabled real-time ASL detection via webcam  
+**Description**: Used CNN and OpenCV to build a live American Sign Language detection system accessible through a Streamlit app.
+
+---
+
+## 🔹 Tic Tac Toe & Wumpus World AI
+**Type**: Mini Project  
+**Timeline**: Nov 2023 – Dec 2023  
+**Tech Stack**: Python, PyGame, Tkinter  
+**Skills**: Rule-based AI, Game Design  
+**Outcome**: Created functional CLI and GUI-based AI games  
+**Description**: Developed classic games using search algorithms and rule-based logic to simulate intelligent behavior.
+
+---
+
+## 🔹 Premium Car Dealership Dashboard
+**Type**: Mini Project  
+**Timeline**: Mar 2023 – Apr 2023  
+**Tech Stack**: Python, SQL, Dash, React  
+**Skills**: Dashboarding, Inventory Management  
+**Outcome**: Built a sales insights platform for luxury vehicles  
+**Description**: Created an analytical dashboard that tracks inventory and sales performance across different vehicle segments.
+
+---
+
+## 🔹 Clinic Management System
+**Type**: Mini Project  
+**Timeline**: Feb 2023 – Mar 2023  
+**Tech Stack**: Python, SQL, Streamlit, CSS  
+**Skills**: Backend Systems, UI Design, Local Databases  
+**Outcome**: Streamlined clinic operations digitally  
+**Description**: Designed a basic EMR system to manage patient records, appointments, and prescriptions with login-based access.
