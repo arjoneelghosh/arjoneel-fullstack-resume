@@ -2,15 +2,6 @@
 
 ---
 
-## 🌟 Technical Core Member – Google Developer Student Clubs (GDSC), GNIT
-**Type**: Student Leadership  
-**Timeline**: Aug 2023 – Present  
-**Organization**: Google Developer Student Clubs, GNIT Chapter  
-**Skills**: Community Management, Event Planning, Technical Mentorship  
-**Description**: Contributed as a core technical member by mentoring juniors, conducting workshops on web and ML technologies, and managing tech events for the student community.
-
----
-
 ## 💼 Lead Developer – FinTrack (Financial Literacy App)
 **Type**: Project Leadership  
 **Timeline**: Feb 2025 – Present  
