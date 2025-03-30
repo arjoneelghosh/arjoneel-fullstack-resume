@@ -21,7 +21,8 @@ def load_file(filename):
     with open(full_path, "r", encoding="utf-8") as f:
         return f.read()
 
-# Load the markdown files with your projects, certifications, and volunteering details
+# Load all grounding content from markdown files
+RESUME = load_file("resume.md")
 PROJECTS = load_file("projects.md")
 CERTIFICATIONS = load_file("certifications.md")
 VOLUNTEERING = load_file("volunteering.md")
@@ -35,9 +36,12 @@ def chat():
 
     user_input = data["message"]
 
-    # Build a dynamic system prompt with your factual data for grounding the response
+    # Build system prompt with all relevant info
     system_prompt = f"""
-You are Arjoneel Ghosh's AI representative. Use the following verified information to answer questions about him.
+You are Arjoneel Ghosh's AI representative. Use the following verified and structured information to answer any questions about him.
+
+### Resume
+{RESUME}
 
 ### Projects
 {PROJECTS}
@@ -48,20 +52,17 @@ You are Arjoneel Ghosh's AI representative. Use the following verified informati
 ### Volunteering and Leadership
 {VOLUNTEERING}
 
-Answer specifically based on this context. Respond in English, Hindi, or Bengali as appropriate.
+Always ground your answers in the above data. Respond professionally and clearly in English, Hindi, or Bengali depending on the user's input.
 """
 
-    # Set up headers for OpenRouter API call
     headers = {
         "Authorization": f"Bearer {os.getenv('OPENROUTER_API_KEY')}",
         "Content-Type": "application/json",
-        # Update the referer if needed:
-        "HTTP-Referer": "https://your-frontend-domain.com"
+        "HTTP-Referer": "https://your-frontend-domain.com"  # optional
     }
 
-    # Define payload with system prompt and user message
     payload = {
-        "model": "mistralai/mistral-7b-instruct",  # Free and fast model available via OpenRouter
+        "model": "mistralai/mistral-7b-instruct",  # free model via OpenRouter
         "messages": [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_input}
@@ -71,16 +72,12 @@ Answer specifically based on this context. Respond in English, Hindi, or Bengali
 
     try:
         response = requests.post("https://openrouter.ai/api/v1/chat/completions", headers=headers, json=payload)
-        response.raise_for_status()  # Raise an error for HTTP errors
-        response_data = response.json()
-        # Expecting response structure: { "choices": [ { "message": { "content": "..." } } ] }
-        reply = response_data["choices"][0]["message"]["content"]
+        response.raise_for_status()
+        reply = response.json()["choices"][0]["message"]["content"]
         return jsonify({"reply": reply})
     except Exception as e:
-        # Optionally log the error for debugging
         print("Error in /api/chat:", e)
         return jsonify({"reply": f"Error: {str(e)}"}), 500
 
 if __name__ == "__main__":
-    # For production on Render, gunicorn will call this module.
     app.run(debug=True)
