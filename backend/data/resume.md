@@ -61,7 +61,7 @@ Interested in AI/ML-related internships with real-world applications in automati
 ## 📫 Contact
 
 - **Email**: arjoneelghosh03@gmail.com  
-- **Phone**: +91 7980157181  
+- **Phone**: +91 9560014969  
 - **LinkedIn**: [linkedin.com/in/arjoneel-ghosh](https://www.linkedin.com/in/arjoneel-ghosh/)  
 - **GitHub**: [github.com/arjoneelghosh](https://github.com/arjoneelghosh)  
 - **Portfolio**: [arjoneelghosh.vercel.app](https://arjoneelghosh.vercel.app)
