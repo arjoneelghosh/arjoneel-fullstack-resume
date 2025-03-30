@@ -1,80 +1,68 @@
-## 👤 Basic Information
-- **Name**: Arjoneel Ghosh
-- **Email**: arjoneelghosh03@gmail.com
-- **Phone**: +91 7980157181
-- **LinkedIn**: https://www.linkedin.com/in/arjoneel-ghosh/
-- **GitHub**: https://github.com/arjoneelghosh
+# Arjoneel Ghosh – Resume Summary
 
 ---
 
 ## 🎓 Education
 
-**B.Tech in Computer Science and Engineering**  
-Guru Nanak Institute of Technology, MAKAUT  
-*2021 – Present*  
-- CGPA: 9.58/10.00
+- **SRM Institute of Science and Technology**  
+  B.Tech in Computer Science and Engineering  
+  *Kattankulathur, Chennai | Aug 2022 – May 2026*
 
-**CBSE Class XII (Science)**  
-North Point Senior Secondary Boarding School  
-*2019 – 2021*  
-- Score: 92.80%
+- **Navyug Convent Senior Secondary School**  
+  Class 12th (CBSE Board)  
+  *New Delhi | Apr 2021 – Mar 2022*
 
-**CBSE Class X**  
-North Point Senior Secondary Boarding School  
-*2019*  
-- Score: 93.40%
+- **Amity International School**  
+  Class 10th (CBSE Board)  
+  *Gurgaon, Haryana | Feb 2019 – Mar 2020*
 
 ---
 
-## 🧠 Skills
+## 🎯 Career Goals
 
-**Languages**: Python, JavaScript, C++, SQL  
-**Web Stack**: HTML, CSS, React.js, Tailwind CSS, Node.js, Express.js  
-**Databases**: PostgreSQL, MongoDB  
-**ML & Tools**: TensorFlow, OpenCV, Pandas, Scikit-learn, Matplotlib, Streamlit  
-**APIs & DevOps**: REST API, GraphQL, Git, GitHub, Render, Vercel, Hugging Face  
-**Design**: Figma, Canva  
-**Other**: Dialogflow, NLP, Prompt Engineering, Streamlit, Firebase
+Interested in AI/ML-related internships with real-world applications in automation, optimization, and data-driven intelligence. Particularly passionate about problem-solving through machine learning, data science, and deep learning techniques.
 
 ---
 
-## 💼 Work Experience
+## 💼 Internship Experience
 
-### 🌾 Data Science Intern — Rainfall Impact Mapping of Bihar  
-**KPMG India**, Jan 2025 – Feb 2025  
-- Developed ML pipelines using XGBoost, PyTorch, and MySQL  
-- Analyzed the impact of seasonal rainfall on agricultural yield  
-- Built interactive dashboards with Plotly and Seaborn
+### KPMG India – Data Science Intern
+**Timeline**: Dec 2024 – Feb 2025  
+**Location**: Remote  
+**Projects**:
+- **R-Styled Forecast Tool for Business Metrics**  
+  Developed a Streamlit-powered analytics app using AutoARIMA and Prophet to forecast organizational KPIs.
 
-### 📈 Machine Learning Intern — Sales Forecasting Tool  
-**OneWater India Pvt. Ltd.**, Dec 2024 – Feb 2025  
-- Developed predictive models using AutoARIMA and Facebook Prophet  
-- Built a Streamlit app to forecast monthly sales for water purifiers
-
----
-
-## 🏆 Certifications
-
-- **Certified System Administrator (CSA)** — ServiceNow
-- **Certified Application Developer (CAD)** — ServiceNow
-- **Data Science with Python** — NPTEL
-- **AI for Everyone** — Coursera
-- **Python Programming Essentials** — Infosys Springboard
+- **Rainfall Impact Mapping of Bihar**  
+  Created rainfall-yield models using XGBoost, Seaborn, PyTorch, and MySQL to map seasonal impacts on agriculture.
 
 ---
 
-## 🌍 Volunteering & Leadership
+## 💻 Technical Skills
 
-- **Technical Core Member** – Google Developer Student Clubs (GDSC), GNIT  
-- **Lead Developer** – FinTrack, student financial literacy app  
-- **Hackathon Finalist** – LoanOne Chatbot (Top 15, Standard Chartered Hackathon)  
-- **Active Contributor** – Open Source projects on GitHub
+- **Languages**: Python, JavaScript, C++, SQL  
+- **Frontend**: HTML, CSS, React.js, Tailwind CSS  
+- **Backend**: Node.js, Express.js  
+- **Databases**: PostgreSQL, MongoDB  
+- **ML & Tools**: TensorFlow, OpenCV, Pandas, Scikit-learn, Matplotlib, Streamlit  
+- **DevOps & APIs**: REST APIs, GraphQL, Git, GitHub, Vercel, Render  
+- **Design**: Figma, Canva  
 
 ---
 
-## 💬 Languages
+## 🌐 Languages
 
 - English (Fluent)  
 - Hindi (Fluent)  
-- Bengali (Native)
+- Bengali (Fluent)  
+
+---
+
+## 📫 Contact
+
+- **Email**: arjoneelghosh03@gmail.com  
+- **Phone**: +91 7980157181  
+- **LinkedIn**: [linkedin.com/in/arjoneel-ghosh](https://www.linkedin.com/in/arjoneel-ghosh/)  
+- **GitHub**: [github.com/arjoneelghosh](https://github.com/arjoneelghosh)  
+- **Portfolio**: [arjoneelghosh.vercel.app](https://arjoneelghosh.vercel.app)
 
