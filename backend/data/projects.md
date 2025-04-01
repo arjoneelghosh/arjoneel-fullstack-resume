@@ -8,7 +8,7 @@
 **Tech Stack**: Python, NLP, Google Dialogflow, React  
 **Skills**: Chatbot, Financial Automation, Multilingual Support  
 **Outcome**: Selected in Top 15 teams nationally  
-**Description**: Built a  assistant to guide users through loan eligibility and financial literacy via chat-based interaction.
+**Description**: Built a multilingual financial assistant to guide users through loan eligibility and financial literacy via chat-based interaction.
 
 ---
 
