@@ -135,6 +135,7 @@ export function Projects() {
 
               <a
                 href="https://github.com"
+                //blank
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition"
