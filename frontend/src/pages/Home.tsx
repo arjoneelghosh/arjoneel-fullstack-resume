@@ -5,7 +5,7 @@ import { ChatInterface } from '../components/ChatInterface';
 
 export function Home() {
   const [isChatOpen, setIsChatOpen] = useState(false);
-
+//for trying
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
