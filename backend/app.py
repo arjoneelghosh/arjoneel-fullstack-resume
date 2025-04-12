@@ -9,7 +9,7 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)
 
-# Compute absolute base directory for this filess
+# Compute absolute base directory for this files
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def load_file(filename):
