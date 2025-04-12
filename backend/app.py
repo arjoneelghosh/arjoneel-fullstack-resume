@@ -9,7 +9,7 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)
 
-# Compute absolute base directory for this file
+# Compute absolute base directory for this files
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def load_file(filename):
@@ -20,7 +20,7 @@ def load_file(filename):
     with open(full_path, "r", encoding="utf-8") as f:
         return f.read()
 
-# Load all grounding content from markdown files
+# Load all grounding content from markdown filess
 RESUME = load_file("resume.md")
 PROJECTS = load_file("projects.md")
 CERTIFICATIONS = load_file("certifications.md")
@@ -61,7 +61,7 @@ Always ground your answers in the above data. Respond professionally and clearly
     }
 
     payload = {
-        "model": "mistralai/mistral-7b-instruct",  # free model via OpenRouter
+        "model": "mistralai/mistral-7b-instruct",  # free models via OpenRouter
         "messages": [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_input}
