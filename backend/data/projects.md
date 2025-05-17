@@ -2,6 +2,16 @@
 
 ---
 
+## 🔹 Satellite Based 
+**Type**: Project  
+**Timeline**: Feb 2025 - Mar 2025
+**Tech Stack**: 
+**Skills**: 
+**Outcome**: 
+**Description**: 
+
+---
+
 ## 🔹 LoanOne Chatbot
 **Type**: Hackathon Project (Standard Chartered Hackathon)  
 **Timeline**: Mar 2025  
@@ -109,3 +119,7 @@
 **Skills**: Backend Systems, UI Design, Local Databases  
 **Outcome**: Streamlined clinic operations digitally  
 **Description**: Designed a basic EMR system to manage patient records, appointments, and prescriptions with login-based access.
+
+
+---
+
