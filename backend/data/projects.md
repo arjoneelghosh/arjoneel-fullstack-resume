@@ -1,4 +1,4 @@
-# Arjoneel Ghosh – Project
+# Arjoneel Ghosh – Projects
 
 ---
 
