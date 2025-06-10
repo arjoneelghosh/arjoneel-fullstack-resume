@@ -9,45 +9,76 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)
 
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+# Compute absolute base directory for this files
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+def load_file(filename):
+    """
+    Loads and returns the content of a file located in backend/data/.
+    """
+    full_path = os.path.join(BASE_DIR, "data", filename)
+    with open(full_path, "r", encoding="utf-8") as f:
+        return f.read()
+
+# Load all grounding content from markdown filess
+RESUME = load_file("resume.md")
+PROJECTS = load_file("projects.md")
+CERTIFICATIONS = load_file("certifications.md")
+VOLUNTEERING = load_file("volunteering.md")
 
 
 
 @app.route('/api/chat', methods=['POST'])
 
 def chat():
-    data = request.get_json() or {}
-    user_input = data.get("message", "")
+    # Parse JSON request body; force parsing in case headers are not perfect
+    data = request.get_json(force=True)
+    if not data or "message" not in data:
+        return jsonify({"reply": "Invalid request: 'message' field is missing."}), 400
+
+    user_input = data["message"]
+
+    # Build system prompt with all relevant info
+    system_prompt = f"""
+You are Arjoneel Ghosh's AI representative. Use the following verified and structured information to answer any questions about him.
+
+### Resume
+{RESUME}
+
+### Projects
+{PROJECTS}
+
+### Certifications
+{CERTIFICATIONS}
+
+### Volunteering and Leadership
+{VOLUNTEERING}
+
+Always ground your answers in the above data. Respond professionally and clearly in English, Hindi, or Bengali depending on the user's input.
+"""
+
+    headers = {
+        "Authorization": f"Bearer {os.getenv('OPENROUTER_API_KEY')}",
+        "Content-Type": "application/json",
+        "HTTP-Referer": "https://your-frontend-domain.com"  # optional
+    }
+
+    payload = {
+        "model": "mistralai/mistral-7b-instruct",  # free models via OpenRouter
+        "messages": [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_input}
+        ],
+        "temperature": 0.7
+    }
 
     try:
-        headers = {
-            "Authorization": f"Bearer {OPENROUTER_API_KEY}",
-            "HTTP-Referer": "https://your-site.com",  # Optional for public OpenRouter listing
-            "Content-Type": "application/json"
-        }
-
-        payload = {
-            "model": "mistralai/mistral-7b-instruct",  # Free and fast
-            "messages": [
-                {
-                    "role": "system",
-                    "content": "You are Arjoneel Ghosh's AI representative. Help users understand his background, projects, and skills. You may reply in English, Hindi, or Bengali based on the input."
-                },
-                {
-                    "role": "user",
-                    "content": user_input
-                }
-            ],
-            "temperature": 0.7
-        }
-
         response = requests.post("https://openrouter.ai/api/v1/chat/completions", headers=headers, json=payload)
         response.raise_for_status()
-
         reply = response.json()["choices"][0]["message"]["content"]
         return jsonify({"reply": reply})
-
     except Exception as e:
+        print("Error in /api/chat:", e)
         return jsonify({"reply": f"Error: {str(e)}"}), 500
 
 if __name__ == "__main__":

@@ -47,7 +47,7 @@ export function ChatInterface({ isOpen, onClose }: ChatInterfaceProps) {
       });
 
       const data = await res.json();
-      console.log("Response from backend:", data); // Debug log
+      console.log("Response from backend:", data); // Debug karne k log
 
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
@@ -57,7 +57,7 @@ export function ChatInterface({ isOpen, onClose }: ChatInterfaceProps) {
 
       setMessages((prev) => [...prev, botMessage]);
     } catch (err) {
-      console.error("Error fetching chatbot response:", err); // Debug log
+      console.error("Error fetching chatbot response:", err); // Debugging p
       setMessages((prev) => [
         ...prev,
         {
