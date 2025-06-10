@@ -11,7 +11,10 @@ CORS(app)
 
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
+
+
 @app.route('/api/chat', methods=['POST'])
+
 def chat():
     data = request.get_json() or {}
     user_input = data.get("message", "")
@@ -48,4 +51,5 @@ def chat():
         return jsonify({"reply": f"Error: {str(e)}"}), 500
 
 if __name__ == "__main__":
+
     app.run(debug=True)
